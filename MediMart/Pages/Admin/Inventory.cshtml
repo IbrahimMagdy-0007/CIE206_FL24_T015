@@ -1,0 +1,113 @@
+﻿@page
+@model InventoryModel
+@{
+    ViewData["Title"] = "Inventory Management";
+}
+
+<h1 class="mb-4">Inventory Management</h1>
+
+<div class="card shadow-sm mb-4">
+    <div class="card-body">
+        <h5 class="card-title">Inventory Table</h5>
+        <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Search Inventory..." />
+        </div>
+        <table class="table table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Product Name</th>
+                    <th>Stock Level</th>
+                    <th>Supplier</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Paracetamol</td>
+                    <td>50</td>
+                    <td>Health Supplies Inc.</td>
+                    <td>
+                        <a href="#" class="btn btn-sm btn-primary"
+                           onclick="preFillForm('Paracetamol', 50)">Update</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Aspirin</td>
+                    <td>20</td>
+                    <td>Pharma Wholesale</td>
+                    <td>
+                        <a href="#" class="btn btn-sm btn-primary"
+                           onclick="preFillForm('Aspirin', 20)">Update</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="card shadow-sm mb-4">
+    <div class="card-body">
+        <h5 class="card-title">Update Stock</h5>
+        <form method="post">
+            <div class="mb-3">
+                <label for="productName" class="form-label">Product Name</label>
+                <input type="text" class="form-control" id="productName" name="ProductName" placeholder="Enter product name" />
+            </div>
+            <div class="mb-3">
+                <label for="stockLevel" class="form-label">Stock Level</label>
+                <input type="number" class="form-control" id="stockLevel" name="StockLevel" placeholder="Enter new stock level" />
+            </div>
+            <button type="submit" class="btn btn-success">Update Stock</button>
+        </form>
+    </div>
+</div>
+
+<!-- Order Products Section -->
+<div class="card shadow-sm">
+    <div class="card-body">
+        <h5 class="card-title">Order Products</h5>
+        <form method="post" asp-page-handler="OrderProduct">
+            <div class="mb-3">
+                <label for="orderProductName" class="form-label">Product Name</label>
+                <input type="text" class="form-control" id="orderProductName" name="OrderProductName" placeholder="Enter product name" required />
+            </div>
+            <div class="mb-3">
+                <label for="orderQuantity" class="form-label">Order Quantity</label>
+                <input type="number" class="form-control" id="orderQuantity" name="OrderQuantity" placeholder="Enter order quantity" required />
+            </div>
+            <div class="mb-3">
+                <label for="supplier" class="form-label">Supplier</label>
+                <input type="text" class="form-control" id="supplier" name="Supplier" placeholder="Enter supplier name" required />
+            </div>
+            <button type="submit" class="btn btn-primary">Order Product</button>
+        </form>
+    </div>
+</div>
+
+<style>
+    .card {
+        border-radius: 8px;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    h5.card-title {
+        font-weight: bold;
+    }
+
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+</style>
+
+<script>
+    function preFillForm(productName, stockLevel) {
+        document.getElementById("productName").value = productName;
+        document.getElementById("stockLevel").value = stockLevel;
+    }
+</script>

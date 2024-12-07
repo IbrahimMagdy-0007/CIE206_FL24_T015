@@ -1,0 +1,38 @@
+@page
+@model PharmacistDashboardModel
+@{
+    ViewData["Title"] = "Pharmacist Dashboard";
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4">Welcome to the Pharmacist Dashboard</h2>
+    <p>Manage prescriptions and place orders directly from here.</p>
+
+    <div class="row">
+        <!-- Prescriptions Section -->
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title text-primary">Prescriptions</h5>
+                    <p class="card-text">
+                        Review and approve customer prescriptions.
+                    </p>
+                    <a href="/Pharmacist/Prescriptions" class="btn btn-primary">Manage Prescriptions</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Orders Section -->
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title text-success">Place Orders</h5>
+                    <p class="card-text">
+                        Create orders based on approved prescriptions.
+                    </p>
+                    <a href="/Pharmacist/Orders" class="btn btn-success">Place Orders</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,131 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MediMart
+build_property.RootNamespace = MediMart
+build_property.ProjectDir = D:\MediMart final\CIE-206\MediMart\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = D:\MediMart final\CIE-206\MediMart
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/MediMart final/CIE-206/MediMart/Pages/Admin/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRGFzaGJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MediMart final/CIE-206/MediMart/Pages/Admin/Insurance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cSW5zdXJhbmNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MediMart final/CIE-206/MediMart/Pages/Admin/Inventory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cSW52ZW50b3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MediMart final/CIE-206/MediMart/Pages/Admin/Orders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cT3JkZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MediMart final/CIE-206/MediMart/Pages/Admin/Products.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUHJvZHVjdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MediMart final/CIE-206/MediMart/Pages/Admin/Statistics.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cU3RhdGlzdGljcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MediMart final/CIE-206/MediMart/Pages/Admin/Users.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MediMart final/CIE-206/MediMart/Pages/customer/Cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcY3VzdG9tZXJcQ2FydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MediMart final/CIE-206/MediMart/Pages/customer/Checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcY3VzdG9tZXJcQ2hlY2tvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MediMart final/CIE-206/MediMart/Pages/customer/Feedback.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcY3VzdG9tZXJcRmVlZGJhY2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MediMart final/CIE-206/MediMart/Pages/customer/Home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcY3VzdG9tZXJcSG9tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MediMart final/CIE-206/MediMart/Pages/customer/OrderConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcY3VzdG9tZXJcT3JkZXJDb25maXJtYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MediMart final/CIE-206/MediMart/Pages/customer/Prescription.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcY3VzdG9tZXJcUHJlc2NyaXB0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MediMart final/CIE-206/MediMart/Pages/customer/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcY3VzdG9tZXJcUHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MediMart final/CIE-206/MediMart/Pages/customer/Store.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcY3VzdG9tZXJcU3RvcmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MediMart final/CIE-206/MediMart/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MediMart final/CIE-206/MediMart/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MediMart final/CIE-206/MediMart/Pages/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MediMart final/CIE-206/MediMart/Pages/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MediMart final/CIE-206/MediMart/Pages/pharmacist/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGhhcm1hY2lzdFxEYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MediMart final/CIE-206/MediMart/Pages/pharmacist/Orders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGhhcm1hY2lzdFxPcmRlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MediMart final/CIE-206/MediMart/Pages/pharmacist/Prescriptions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGhhcm1hY2lzdFxQcmVzY3JpcHRpb25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MediMart final/CIE-206/MediMart/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MediMart final/CIE-206/MediMart/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MediMart final/CIE-206/MediMart/Pages/SignUp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2lnblVwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MediMart final/CIE-206/MediMart/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MediMart final/CIE-206/MediMart/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MediMart final/CIE-206/MediMart/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-offfv3r642

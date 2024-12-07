@@ -1,0 +1,52 @@
+﻿@page
+@{
+    ViewData["Title"] = "Welcome";
+}
+
+<div class="container text-center mt-5">
+    <!-- Welcome Section -->
+    <div class="bg-light p-5 rounded shadow">
+        <h1 class="display-4">Welcome to MediMart!</h1>
+        <p class="lead mt-3">
+            Your one-stop solution for healthcare needs. Shop for medicines, manage your profile, and stay on top of your health!
+        </p>
+        <div class="mt-4">
+            <a href="/Login" class="btn btn-primary btn-lg me-3">Login</a>
+            <a href="/Signup" class="btn btn-success btn-lg">Sign Up</a>
+        </div>
+    </div>
+
+ 
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title text-primary"><i class="fas fa-shopping-cart"></i> Shop Medicines</h5>
+                    <p class="card-text">
+                        Explore our wide range of medicines and healthcare products at competitive prices.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title text-success"><i class="fas fa-user-md"></i> Manage Prescriptions</h5>
+                    <p class="card-text">
+                        Upload, track, and manage your prescriptions securely and easily.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title text-warning"><i class="fas fa-heartbeat"></i> Health Monitoring</h5>
+                    <p class="card-text">
+                        Stay updated on your health with our tracking tools and tips.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

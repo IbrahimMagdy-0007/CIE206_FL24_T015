@@ -1,0 +1,69 @@
+@page
+@model CustomerStoreModel
+@{
+    ViewData["Title"] = "Store";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center">Store</h2>
+    <p class="text-center">Browse our products and find the best deals for you.</p>
+
+    <!-- Filter Section -->
+    <div class="card mb-4 p-3">
+        <h5>Filters</h5>
+        <div class="row">
+            <!-- Price Range Filter -->
+            <div class="col-md-4">
+                <label for="priceRange" class="form-label">Price Range:</label>
+                <input type="range" class="form-range" id="priceRange" name="priceRange" min="0" max="100" value="50"
+                       oninput="document.getElementById('priceValue').textContent = this.value">
+                <p>Up to: <span id="priceValue">$50</span></p>
+            </div>
+
+            <!-- Category Filter -->
+            <div class="col-md-4">
+                <label for="categorySelect" class="form-label">Category:</label>
+                <select class="form-select" id="categorySelect">
+                    <option value="">All Categories</option>
+                    @foreach (var category in Model.Categories)
+                    {
+                        <option value="@category">@category</option>
+                    }
+                </select>
+            </div>
+
+            <!-- Apply Filters Button -->
+            <div class="col-md-4 d-flex align-items-end">
+                <button class="btn btn-primary w-100" onclick="applyFilters()">Apply Filters</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="row">
+        @foreach (var product in Model.Products)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-img-top d-flex justify-content-center align-items-center bg-light"
+                         style="height: 150px;">
+                        <span class="text-muted">Image Placeholder</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">@product.Name</h5>
+                        <p class="card-text">@product.Price.ToString("C")</p>
+                        <button class="btn btn-primary w-100">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<script>
+    function applyFilters() {
+        const priceRange = document.getElementById('priceRange').value;
+        const category = document.getElementById('categorySelect').value;
+        alert(`Filtering by price <= $${priceRange} and category: ${category}`);
+    }
+</script>

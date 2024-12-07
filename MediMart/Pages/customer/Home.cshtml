@@ -1,0 +1,44 @@
+@page
+@model CustomerHomeModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="container mt-5">
+    <!-- Welcome Section -->
+    <div class="text-center mb-5">
+        <h1 class="display-4">Welcome, @ViewData["CustomerName"]!</h1>
+        <p class="lead">Explore our store, manage your profile, upload prescriptions, and leave feedback.</p>
+        <a href="/Customer/Store" class="btn btn-primary btn-lg">Shop Now</a>
+    </div>
+
+    <!-- Featured Products Section -->
+    <h2>Popular Products</h2>
+    <div class="row">
+        @foreach (var product in Model.PopularProducts)
+        {
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-img-top bg-light d-flex justify-content-center align-items-center" style="height: 150px;">
+                        <div style="font-size: 24px; color: #999;">Image Placeholder</div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">@product.Name</h5>
+                        <p class="card-text">@product.Price.ToString("C")</p>
+                        <a href="/Customer/Store/Details?productId=@product.Id" class="btn btn-primary btn-sm">View Details</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <!-- About Section -->
+    <div class="mt-5 p-4 bg-light rounded">
+        <h2>About MediMart</h2>
+        <p>
+            MediMart is dedicated to providing you with the best online shopping experience for medical products.
+            Explore our vast range of products, upload prescriptions, and manage your profile all in one place.
+        </p>
+        <a href="/Customer/Store" class="btn btn-secondary">Start Shopping</a>
+    </div>
+</div>

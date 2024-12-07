@@ -1,0 +1,92 @@
+﻿@page
+@model UsersModel
+@{
+    ViewData["Title"] = "User Management";
+}
+
+<h1 class="mb-4">User Management</h1>
+
+<div class="card shadow-sm mb-4">
+    <div class="card-body">
+        <h5 class="card-title">Users Table</h5>
+        <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Search Users..." />
+        </div>
+        <table class="table table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>John Doe</td>
+                    <td>Admin</td>
+                    <td>johndoe@example.com</td>
+                    <td>
+                        <a href="#" class="btn btn-sm btn-primary">Edit</a>
+                        <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Jane Smith</td>
+                    <td>Member</td>
+                    <td>janesmith@example.com</td>
+                    <td>
+                        <a href="#" class="btn btn-sm btn-primary">Edit</a>
+                        <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="card shadow-sm">
+    <div class="card-body">
+        <h5 class="card-title">Add / Edit User</h5>
+        <form>
+            <div class="mb-3">
+                <label for="userName" class="form-label">Name</label>
+                <input type="text" class="form-control" id="userName" placeholder="Enter user name" />
+            </div>
+            <div class="mb-3">
+                <label for="userEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="userEmail" placeholder="Enter user email" />
+            </div>
+            <div class="mb-3">
+                <label for="userPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="userPassword" placeholder="Enter user password" />
+            </div>
+            <div class="mb-3">
+                <label for="userRole" class="form-label">Role</label>
+                <select class="form-select" id="userRole">
+                    <option>Admin</option>
+                    <option>Member</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-success">Save</button>
+        </form>
+    </div>
+</div>
+
+<style>
+    .card {
+        border-radius: 8px;
+    }
+    .card-body {
+        padding: 20px;
+    }
+    h5.card-title {
+        font-weight: bold;
+    }
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+</style>

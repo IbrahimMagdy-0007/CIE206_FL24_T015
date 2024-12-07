@@ -1,0 +1,90 @@
+﻿@page
+@model InsuranceModel
+@{
+    ViewData["Title"] = "Insurance Management";
+}
+
+<h1 class="mb-4">Insurance Management</h1>
+
+<!-- Insurance Providers Table -->
+<div class="card shadow-sm mb-4">
+    <div class="card-body">
+        <h5 class="card-title">Insurance Providers</h5>
+        <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Search Providers..." />
+        </div>
+        <table class="table table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Provider Name</th>
+                    <th>Coverage Percentage</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Health Insurance Co.</td>
+                    <td>90%</td>
+                    <td>
+                        <a href="#" class="btn btn-sm btn-primary" onclick="preFillProvider('Health Insurance Co.', 90)">Edit</a>
+                        <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Global Care</td>
+                    <td>80%</td>
+                    <td>
+                        <a href="#" class="btn btn-sm btn-primary" onclick="preFillProvider('Global Care', 80)">Edit</a>
+                        <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Add/Edit Insurance Provider -->
+<div class="card shadow-sm">
+    <div class="card-body">
+        <h5 class="card-title">Add / Edit Provider</h5>
+        <form method="post" asp-page-handler="SaveProvider">
+            <div class="mb-3">
+                <label for="providerName" class="form-label">Provider Name</label>
+                <input type="text" class="form-control" id="providerName" name="ProviderName" placeholder="Enter provider name" required />
+            </div>
+            <div class="mb-3">
+                <label for="coveragePercentage" class="form-label">Coverage Percentage</label>
+                <input type="number" class="form-control" id="coveragePercentage" name="CoveragePercentage" placeholder="Enter coverage percentage" required />
+            </div>
+            <button type="submit" class="btn btn-success">Save Provider</button>
+        </form>
+    </div>
+</div>
+
+<style>
+    .card {
+        border-radius: 8px;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    h5.card-title {
+        font-weight: bold;
+    }
+
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+</style>
+
+<script>
+    function preFillProvider(name, coverage) {
+        document.getElementById("providerName").value = name;
+        document.getElementById("coveragePercentage").value = coverage;
+    }
+</script>

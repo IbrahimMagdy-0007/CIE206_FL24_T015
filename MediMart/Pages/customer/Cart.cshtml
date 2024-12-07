@@ -1,0 +1,39 @@
+@page
+@model CustomerCartModel
+@{
+    ViewData["Title"] = "Cart";
+}
+
+<div class="container mt-5">
+    <h2>Your Cart</h2>
+    <p>Review your selected items and proceed to checkout.</p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.CartItems)
+            {
+                    <tr>
+                        <td>@item.ProductName</td>
+                        <td>@item.Price.ToString("C")</td>
+                        <td>@item.Quantity</td>
+                        <td>@(item.Price * item.Quantity).ToString("C")</td>
+                        <td>
+                            <button class="btn btn-danger btn-sm">Remove</button>
+                        </td>
+                    </tr>
+            }
+        </tbody>
+    </table>
+    <div class="d-flex justify-content-between align-items-center">
+        <h4>Total: @Model.CartItems.Sum(x => x.Price * x.Quantity).ToString("C")</h4>
+        <a href="/Customer/Checkout" class="btn btn-success">Proceed to Checkout</a>
+    </div>
+</div>

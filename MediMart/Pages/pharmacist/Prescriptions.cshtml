@@ -1,0 +1,35 @@
+@page
+@model PharmacistPrescriptionsModel
+@{
+    ViewData["Title"] = "Manage Prescriptions";
+}
+
+<div class="container mt-5">
+    <h2>Manage Prescriptions</h2>
+    <p>Approve or reject prescriptions submitted by customers.</p>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Prescription ID</th>
+                <th>Customer Name</th>
+                <th>Medication</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var prescription in Model.Prescriptions)
+            {
+                    <tr>
+                        <td>@prescription.Id</td>
+                        <td>@prescription.CustomerName</td>
+                        <td>@prescription.Medication</td>
+                        <td>
+                            <button class="btn btn-success btn-sm">Approve</button>
+                            <button class="btn btn-danger btn-sm">Reject</button>
+                        </td>
+                    </tr>
+            }
+        </tbody>
+    </table>
+</div>

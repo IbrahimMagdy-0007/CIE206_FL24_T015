@@ -1,0 +1,136 @@
+﻿@page
+@model DashboardModel
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<h1 class="mb-4">Dashboard</h1>
+
+<div class="row mb-4">
+    <!-- Restock Alerts -->
+    <div class="col-md-4">
+        <div class="card shadow-sm bg-light text-dark">
+            <div class="card-body">
+                <h5 class="card-title">Restock Alerts</h5>
+                <p>Show products that need to be restocked.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Today’s Sales -->
+    <div class="col-md-4">
+        <div class="card shadow-sm bg-primary text-white">
+            <div class="card-body">
+                <h5 class="card-title">Today’s Sales</h5>
+                <p>Display sales summary for the day.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Today’s Orders -->
+    <div class="col-md-4">
+        <div class="card shadow-sm bg-success text-white">
+            <div class="card-body">
+                <h5 class="card-title">Today’s Orders</h5>
+                <p>Show recent orders placed by customers.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Recent Sales Table -->
+<div class="card shadow-sm mb-4">
+    <div class="card-body">
+        <h5 class="card-title">Recent Sales</h5>
+        <table class="table table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>Date</th>
+                    <th>Invoice</th>
+                    <th>Customer</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01 Jan 2045</td>
+                    <td>INV-0123</td>
+                    <td>John Doe</td>
+                    <td>$123</td>
+                    <td><span class="badge bg-success">Paid</span></td>
+                    <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
+                </tr>
+                <tr>
+                    <td>01 Jan 2045</td>
+                    <td>INV-0124</td>
+                    <td>Jane Smith</td>
+                    <td>$456</td>
+                    <td><span class="badge bg-warning text-dark">Pending</span></td>
+                    <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="row">
+    <!-- Messages -->
+    <div class="col-md-4">
+        <div class="card shadow-sm mb-4 bg-light">
+            <div class="card-body">
+                <h5 class="card-title">Messages</h5>
+                <ul class="list-group">
+                    <li class="list-group-item">John Doe: Short message here...</li>
+                    <li class="list-group-item">Jane Smith: Another short message...</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Calendar -->
+    <div class="col-md-4">
+        <div class="card shadow-sm mb-4 bg-info text-white">
+            <div class="card-body">
+                <h5 class="card-title">Calendar</h5>
+                <p>Placeholder for calendar.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- To-Do List -->
+    <div class="col-md-4">
+        <div class="card shadow-sm mb-4 bg-light">
+            <div class="card-body">
+                <h5 class="card-title">To-Do List</h5>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <input type="checkbox" /> Task 1
+                    </li>
+                    <li class="list-group-item">
+                        <input type="checkbox" /> Task 2
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .card {
+        border-radius: 8px;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    h5.card-title {
+        font-weight: bold;
+    }
+
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+</style>

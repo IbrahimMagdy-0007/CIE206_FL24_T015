@@ -1,0 +1,24 @@
+@page
+@model MediMart.Pages.SignUpModel
+@{
+    ViewData["Title"] = "Sign Up";
+}
+
+<div class="container mt-5">
+    <h2>Sign Up</h2>
+    <form method="post">
+        <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" id="username" name="Username" class="form-control" required />
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" id="password" name="Password" class="form-control" required />
+        </div>
+        <div class="mb-3">
+            <label for="confirmPassword" class="form-label">Confirm Password</label>
+            <input type="password" id="confirmPassword" name="ConfirmPassword" class="form-control" required />
+        </div>
+        <button type="submit" class="btn btn-success">Sign Up</button>
+    </form>
+</div>

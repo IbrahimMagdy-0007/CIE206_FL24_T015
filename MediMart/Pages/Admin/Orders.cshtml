@@ -1,0 +1,110 @@
+﻿@page
+@model OrdersModel
+@{
+    ViewData["Title"] = "Order Management";
+}
+
+<h1 class="mb-4">Order Management</h1>
+
+<div class="card shadow-sm mb-4">
+    <div class="card-body">
+        <h5 class="card-title">Orders Table</h5>
+        <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Search Orders..." />
+        </div>
+        <table class="table table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Order ID</th>
+                    <th>Customer Name</th>
+                    <th>Status</th>
+                    <th>Total</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>ORD-001</td>
+                    <td>John Doe</td>
+                    <td><span class="badge bg-success">Completed</span></td>
+                    <td>$123.00</td>
+                    <td>
+                        <a href="#" class="btn btn-sm btn-primary" onclick="preFillOrder('ORD-001', 'John Doe', 'Completed', 123.00)">Edit</a>
+                        <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>ORD-002</td>
+                    <td>Jane Smith</td>
+                    <td><span class="badge bg-warning text-dark">Pending</span></td>
+                    <td>$89.00</td>
+                    <td>
+                        <a href="#" class="btn btn-sm btn-primary" onclick="preFillOrder('ORD-002', 'Jane Smith', 'Pending', 89.00)">Edit</a>
+                        <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Edit Order Section -->
+<div class="card shadow-sm">
+    <div class="card-body">
+        <h5 class="card-title">Edit Order</h5>
+        <form method="post" asp-page-handler="EditOrder">
+            <div class="mb-3">
+                <label for="orderId" class="form-label">Order ID</label>
+                <input type="text" class="form-control" id="orderId" name="OrderId" placeholder="Enter order ID" readonly />
+            </div>
+            <div class="mb-3">
+                <label for="customerName" class="form-label">Customer Name</label>
+                <input type="text" class="form-control" id="customerName" name="CustomerName" placeholder="Enter customer name" />
+            </div>
+            <div class="mb-3">
+                <label for="orderStatus" class="form-label">Status</label>
+                <select class="form-select" id="orderStatus" name="OrderStatus">
+                    <option value="Pending">Pending</option>
+                    <option value="Completed">Completed</option>
+                    <option value="Cancelled">Cancelled</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="orderTotal" class="form-label">Total</label>
+                <input type="number" class="form-control" id="orderTotal" name="OrderTotal" placeholder="Enter order total" />
+            </div>
+            <button type="submit" class="btn btn-success">Save Changes</button>
+        </form>
+    </div>
+</div>
+
+<style>
+    .card {
+        border-radius: 8px;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    h5.card-title {
+        font-weight: bold;
+    }
+
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+</style>
+
+<script>
+    // Function to pre-fill the edit order form
+    function preFillOrder(orderId, customerName, status, total) {
+        document.getElementById("orderId").value = orderId;
+        document.getElementById("customerName").value = customerName;
+        document.getElementById("orderStatus").value = status;
+        document.getElementById("orderTotal").value = total;
+    }
+</script>

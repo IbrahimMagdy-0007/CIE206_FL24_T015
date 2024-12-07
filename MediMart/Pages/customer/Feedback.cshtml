@@ -1,0 +1,21 @@
+@page
+@model CustomerFeedbackModel
+@{
+    ViewData["Title"] = "Feedback";
+}
+
+<div class="container mt-5">
+    <h2>Feedback</h2>
+    <p>Your feedback helps us improve our services. Please let us know your thoughts below.</p>
+    <form method="post">
+        <div class="mb-3">
+            <label for="Subject" class="form-label">Subject</label>
+            <input type="text" class="form-control" id="Subject" name="Subject" />
+        </div>
+        <div class="mb-3">
+            <label for="Message" class="form-label">Message</label>
+            <textarea class="form-control" id="Message" name="Message" rows="5"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Feedback</button>
+    </form>
+</div>

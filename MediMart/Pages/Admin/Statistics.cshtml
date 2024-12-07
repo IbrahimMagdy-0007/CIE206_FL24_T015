@@ -1,0 +1,144 @@
+﻿@page
+@model StatisticsModel
+@{
+    ViewData["Title"] = "Statistics";
+}
+
+<h1 class="mb-4">Statistics</h1>
+
+<div class="row">
+    <!-- Total Sales -->
+    <div class="col-md-4">
+        <div class="card shadow-sm bg-primary text-white mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Total Sales</h5>
+                <h3>$123,456</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Total Revenue -->
+    <div class="col-md-4">
+        <div class="card shadow-sm bg-success text-white mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Total Revenue</h5>
+                <h3>$456,789</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Total Users -->
+    <div class="col-md-4">
+        <div class="card shadow-sm bg-info text-white mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Total Users</h5>
+                <h3>1,234</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <!-- Sales & Revenue Chart -->
+    <div class="col-md-6">
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Sales & Revenue Trends</h5>
+                <canvas id="salesRevenueChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top Selling Products -->
+    <div class="col-md-6">
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Top Selling Products</h5>
+                <canvas id="topProductsChart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .card {
+        border-radius: 8px;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    h5.card-title {
+        font-weight: bold;
+    }
+
+    canvas {
+        width: 100% !important;
+        height: 300px !important;
+    }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Sales & Revenue Chart
+    const salesRevenueCtx = document.getElementById('salesRevenueChart').getContext('2d');
+    const salesRevenueChart = new Chart(salesRevenueCtx, {
+        type: 'line',
+        data: {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+            datasets: [
+                {
+                    label: 'Sales',
+                    data: [1200, 1900, 3000, 5000, 2300, 4000],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 2,
+                    fill: false
+                },
+                {
+                    label: 'Revenue',
+                    data: [2200, 2900, 4000, 6000, 3300, 5000],
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 2,
+                    fill: false
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+
+    // Top Selling Products Chart
+    const topProductsCtx = document.getElementById('topProductsChart').getContext('2d');
+    const topProductsChart = new Chart(topProductsCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Product A', 'Product B', 'Product C', 'Product D', 'Product E'],
+            datasets: [{
+                label: 'Units Sold',
+                data: [500, 400, 300, 200, 100],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+</script>
